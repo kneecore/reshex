@@ -1,6 +1,6 @@
 {
   name: "reshex.book.patterns.spells.reshex_spells",
-  category: "hexcasting:patterns/spells",
+  category: "hexcasting:patterns",
   icon: "minecraft:spruce_sign",
   advancement: "hexcasting:root",
   pages: [
