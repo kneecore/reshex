@@ -3,15 +3,13 @@
     book: {
       patterns: {
         spells: {
-          dummy_spells: {
-            "": "Dummy Spells",
-            congratulate: "Remove an entity from the stack, then congratulate them.",
-          },
-        },
-        great_spells: {
-          dummy_great_spells: {
-            "": "Dummy Great Spells",
-            "congratulate/great": "Same as $(l:patterns/spells/dummy_spells#reshex:congratulate)$(action)Congratulate/$, but as a great spell.",
+          reshex_spells: {
+            "": "Reshex Spells",
+            thoths_cousin: "Works the exact same as Thoth's Gambit however, it does not copy the stack into the sub-stack every iteration. I have not found a better name for this pattern in any texts.",
+            thatonesnake: "This pattern appears to... simply return itself? I do not see a use for this, however some arcane texts appear to refer to it as a Quine.",
+            garbage_refl: "Simply returns a Garbage iota. It seems to be intended to be used with $(l:patterns/spells/dummy_spells#reshex:garbage_purification)$(action)Garbage Purification/$.",
+            garbage_purification: "Takes a Garbage iota, and returns a random number. I find this extremely similar to the Entropy Reflection pattern, the text I have found it from claims this is more \"thematically appropiate\".",
+            gemini_gambit_2: "I have made this pattern to fix a problem I have experienced. Works exactly the same as $(l:patterns/stackmanip#hexcasting:duplicate_n)$(action)Gemini Gambit/$"
           },
         },
       },
@@ -21,25 +19,16 @@
   hexcasting: {
     action: {
       "reshex:": {
-        congratulate: "Congratulate Player",
-        "congratulate/great": "Great Congrats!",
-      },
-
-      // use this to add shortened versions of pattern names if the full name won't fit in the ingame book
-      // you don't need to add an entry for every pattern - the above value will be used as a default
-      book: {
-        "reshex:": {
-          congratulate: "Congratulate",
-        },
+        thatonesnake: "Ouroborus",
+        thoths_cousin: "Thoth's cousin's Gambit",
+        garbage_refl: "Garbage Reflection",
+        garbage_purification: "Garbage Purification",
+        gemini_gambit_2: "Gemini Gambit II"
       },
     },
   },
 
   text: {
-    reshex: {
-      congrats: "Tell %1$s they're doing a good job!",
-    },
-
     "autoconfig.reshex": {
       title: "KVHA (Kneecore's Very Hex Addon) Config",
 

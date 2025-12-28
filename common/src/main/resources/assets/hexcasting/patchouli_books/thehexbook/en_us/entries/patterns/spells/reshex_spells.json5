@@ -1,0 +1,48 @@
+{
+  name: "reshex.book.patterns.spells.reshex_spells",
+  category: "hexcasting:patterns/spells",
+  icon: "minecraft:spruce_sign",
+  advancement: "hexcasting:root",
+  pages: [
+    {
+      type: "hexcasting:pattern",
+      op_id: "reshex:thatonesnake",
+      anchor: "reshex:thatonesnake",
+      input: "",
+      output: "pattern",
+      text: "reshex.book.patterns.spells.reshex_spells.thatonesnake",
+    },
+    {
+      type: "hexcasting:pattern",
+      op_id: "reshex:thoths_cousin",
+      anchor: "reshex:thoths_cousin",
+      input: "list of patterns, list",
+      output: "list",
+      text: "reshex.book.patterns.spells.reshex_spells.thoths_cousin",
+    },
+    {
+      type: "hexcasting:pattern",
+      op_id: "reshex:garbage_refl",
+      anchor: "reshex:garbage_refl",
+      input: "",
+      output: "garbage",
+      text: "reshex.book.patterns.spells.reshex_spells.garbage_refl",
+    },
+    {
+      type: "hexcasting:pattern",
+      op_id: "reshex:garbage_purification",
+      anchor: "reshex:garbage_purification",
+      input: "garbage",
+      output: "number",
+      text: "reshex.book.patterns.spells.reshex_spells.garbage_purification",
+    },
+    {
+      type: "hexcasting:pattern",
+      op_id: "reshex:gemini_gambit_2",
+      anchor: "reshex:gemini_gambit_2",
+      input: "garbage",
+      output: "number",
+      text: "reshex.book.patterns.spells.reshex_spells.gemini_gambit_2",
+    }
+  ],
+}

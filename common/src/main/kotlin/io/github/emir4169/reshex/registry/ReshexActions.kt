@@ -6,20 +6,27 @@ import at.petrak.hexcasting.api.casting.math.HexDir
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.common.lib.HexRegistries
 import at.petrak.hexcasting.common.lib.hex.HexActions
-import io.github.emir4169.reshex.casting.actions.spells.OpCongratulate
+import dev.architectury.platform.Platform
+import io.github.emir4169.reshex.casting.actions.spells.*
 
 object ReshexActions : ReshexRegistrar<ActionRegistryEntry>(
     HexRegistries.ACTION,
     { HexActions.REGISTRY },
 ) {
-    val CONGRATULATE = make("congratulate", HexDir.WEST, "eed", OpCongratulate)
-
-    val GREAT_CONGRATULATE = make("congratulate/great", HexDir.EAST, "qwwqqqwwqwded", OpCongratulate)
-
-    private fun make(name: String, startDir: HexDir, signature: String, action: Action) =
+    val THOTH_COUSIN = make("thoths_cousin", HexDir.SOUTH_EAST, "adadaqadada", OpThothsCousin)
+    val THATONESNAKE = make("thatonesnake", HexDir.SOUTH_EAST, "dwewdeaqqwqqwwqwwqqwa", OpThatOneSnake)
+    //val interopthingy = make("stocktakersrefl2", HexDir.SOUTH_EAST, "eewaqaweedww", OpHexal_StocktakersRefl, "hexal")
+    val GIVEGARBAGE = make("garbage_refl", HexDir.SOUTH_EAST, "awaawawqaqwedadadewwd", OpGiveGarbage)
+    val EATGARBAGE = make("garbage_purification", HexDir.SOUTH_EAST, "eeeaqqwqwqq", OpEatGarbage)
+    fun make(name: String, startDir: HexDir, signature: String, action: Action, interopID: String) {
+        if (Platform.isModLoaded(interopID)) {
+            make(name, startDir, signature) { action }
+        }
+    }
+    fun make(name: String, startDir: HexDir, signature: String, action: Action) =
         make(name, startDir, signature) { action }
 
-    private fun make(name: String, startDir: HexDir, signature: String, getAction: () -> Action) = register(name) {
+    fun make(name: String, startDir: HexDir, signature: String, getAction: () -> Action) = register(name) {
         ActionRegistryEntry(HexPattern.fromAngles(signature, startDir), getAction())
     }
 }
