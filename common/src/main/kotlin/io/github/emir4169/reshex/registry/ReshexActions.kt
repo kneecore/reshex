@@ -18,6 +18,7 @@ object ReshexActions : ReshexRegistrar<ActionRegistryEntry>(
     //val interopthingy = make("stocktakersrefl2", HexDir.SOUTH_EAST, "eewaqaweedww", OpHexal_StocktakersRefl, "hexal")
     val GIVEGARBAGE = make("garbage_refl", HexDir.SOUTH_EAST, "awaawawqaqwedadadewwd", OpGiveGarbage)
     val EATGARBAGE = make("garbage_purification", HexDir.SOUTH_EAST, "eeeaqqwqwqq", OpEatGarbage)
+    val GEMINIGAMBITBUTITSNOTSTUPID = make("gemini_gambit_ii", HexDir.SOUTH_EAST, "aawwawawwaa", OpGemini2)
     fun make(name: String, startDir: HexDir, signature: String, action: Action, interopID: String) {
         if (Platform.isModLoaded(interopID)) {
             make(name, startDir, signature) { action }
